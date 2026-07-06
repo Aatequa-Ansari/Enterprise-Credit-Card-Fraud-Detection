@@ -1,0 +1,415 @@
+/* ==========================================================
+   ENTERPRISE FRAUD SHIELD
+   Global Theme
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+html,
+body,
+[class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+.stApp {
+    background: #060B18;
+    color: white;
+}
+
+header {
+    background: transparent !important;
+}
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
+
+/* ==========================================================
+   MAIN CONTAINER
+========================================================== */
+
+.block-container {
+    max-width: 1700px;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+}
+
+/* ==========================================================
+   TITLES & TEXT
+========================================================== */
+
+h1 {
+    font-size: 48px !important;
+    font-weight: 800 !important;
+    color: white !important;
+}
+
+h2 {
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    color: white !important;
+}
+
+h3 {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    color: white !important;
+}
+
+p {
+    color: #AEB6CF;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border: 1px solid #223357;
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+section[data-testid="stSidebar"] {
+    background: #08111F;
+    border-right: 1px solid #233454;
+}
+
+section[data-testid="stSidebar"] * {
+    color: white;
+}
+
+/* ==========================================================
+   INTERACTIVE ELEMENTS
+========================================================== */
+
+.stButton>button {
+    width: 100%;
+    border-radius: 14px;
+    background: #2D5BFF;
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 12px;
+    transition: .3s;
+}
+
+.stButton>button:hover {
+    background: #3F6FFF;
+    transform: translateY(-2px);
+}
+
+.stTextInput input,
+.stNumberInput input,
+textarea {
+    border-radius: 12px !important;
+    border: 1px solid #30456F !important;
+    background: #0E1830 !important;
+    color: white !important;
+}
+
+div[data-baseweb="select"] {
+    background: #0E1830;
+    border-radius: 12px;
+}
+
+div[data-testid="metric-container"] {
+    background: #101C38;
+    border-radius: 18px;
+    border: 1px solid #223B6C;
+    padding: 18px;
+}
+
+[data-testid="stDataFrame"] {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* ==========================================================
+   HERO BANNER
+========================================================== */
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    padding: 70px;
+    border-radius: 30px;
+    background: radial-gradient(circle at top right, rgba(78,124,255,.20), transparent 30%),
+                linear-gradient(135deg, #0D1738, #13224B, #0C1635);
+    border: 1px solid rgba(80,120,255,.25);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 55px;
+    box-shadow: 0 0 80px rgba(40,90,255,.10), 0 35px 70px rgba(0,0,0,.35);
+}
+
+.hero-left {
+    flex: 1;
+    z-index: 5;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 50px;
+    background: rgba(79,129,255,.10);
+    border: 1px solid rgba(79,129,255,.30);
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #64B5FF;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 66px;
+    font-weight: 900;
+    line-height: 1.05;
+    color: white;
+    margin-bottom: 28px;
+}
+
+.hero-title span {
+    background: linear-gradient(90deg, #4DA3FF, #8C74FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 21px;
+    line-height: 1.8;
+    color: #B7C7E7;
+    max-width: 760px;
+    margin-bottom: 35px;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.hero-chip {
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+    transition: .35s;
+    cursor: pointer;
+}
+
+.hero-chip:hover {
+    transform: translateY(-3px);
+}
+
+.hero-chip.blue {
+    background: rgba(59,130,246,.15);
+    border: 1px solid rgba(59,130,246,.35);
+    color: #6EB8FF;
+}
+
+.hero-chip.green {
+    background: rgba(34,197,94,.15);
+    border: 1px solid rgba(34,197,94,.35);
+    color: #55F29C;
+}
+
+.hero-chip.purple {
+    background: rgba(168,85,247,.15);
+    border: 1px solid rgba(168,85,247,.35);
+    color: #C38CFF;
+}
+
+.hero-right {
+    flex: .95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right img {
+    width: 520px;
+    border-radius: 25px;
+    filter: drop-shadow(0 0 60px rgba(70,120,255,.35));
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-18px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ==========================================================
+   PREMIUM KPI CARD
+========================================================== */
+
+.kpi-card {
+    background: linear-gradient(180deg, #111A35, #0D1630);
+    border: 1px solid rgba(70, 110, 255, 0.35);
+    border-radius: 22px;
+    padding: 22px;
+    min-height: 240px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: .35s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.kpi-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(72,126,255,.25);
+    border: 1px solid #4D78FF;
+}
+
+.kpi-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+}
+
+.kpi-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.icon-blue { background: rgba(59,130,246,.15); color: #4DA3FF; }
+.icon-green { background: rgba(34,197,94,.15); color: #4ADE80; }
+.icon-purple { background: rgba(139,92,246,.15); color: #A78BFA; }
+.icon-orange { background: rgba(245,158,11,.15); color: #FBBF24; }
+.icon-pink { background: rgba(236,72,153,.15); color: #F472B6; }
+.icon-cyan { background: rgba(34,211,238,.15); color: #67E8F9; }
+.icon-yellow { background: rgba(254,240,138,.15); color: #FACC15; }
+
+.kpi-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #93A8D6;
+    margin-top: 10px;
+}
+
+.kpi-value {
+    font-size: 38px;
+    font-weight: 900;
+    color: white;
+    margin-top: 12px;
+    margin-bottom: 14px;
+}
+
+.kpi-subtitle {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #7F95BD;
+}
+
+/* ==========================================================
+   GLASS CARD & SECTION TITLE
+========================================================== */
+
+.glass-card {
+    background: #101C38;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #223B6C;
+    box-shadow: 0 0 30px rgba(79,124,255,.08);
+}
+
+.section-title {
+    font-size: 44px;
+    font-weight: 900;
+    color: white;
+    margin-top: 45px;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+}
+
+
+
+section[data-testid="stSidebar"] div[data-testid="stSidebarNav"]{
+    display:none !important;
+}
+
+
+[data-testid="stSidebarNav"] ul li:first-child{
+    display:none;
+}
+
+
+/* Hide Streamlit Navigation */
+
+[data-testid="stSidebarNav"]{
+    display:none;
+}
+
+/* Sidebar Buttons */
+
+.stButton>button{
+
+background:#16213e;
+
+border-radius:12px;
+
+height:48px;
+
+font-size:16px;
+
+font-weight:600;
+
+border:1px solid #2d4cff;
+
+color:white;
+
+margin-bottom:8px;
+
+transition:.3s;
+}
+
+.stButton>button:hover{
+
+background:#295dff;
+
+transform:translateX(4px);
+
+}

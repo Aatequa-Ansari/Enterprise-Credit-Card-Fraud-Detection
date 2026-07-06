@@ -1,0 +1,78 @@
+<<<<<<< HEAD
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+myenv/
+
+
+
+# VS Code
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Streamlit Cache
+.streamlit/cache/
+
+# Logs
+*.log
+
+# Large generated folders
+saved_models/ml/*
+saved_models/dl/*
+saved_models/scalers/*
+
+!saved_models/ml/.gitkeep
+!saved_models/dl/.gitkeep
+!saved_models/scalers/.gitkeep
+
+# Temporary files
+=======
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+myenv/
+
+
+
+# VS Code
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Streamlit Cache
+.streamlit/cache/
+
+# Logs
+*.log
+
+# Large generated folders
+saved_models/ml/*
+saved_models/dl/*
+saved_models/scalers/*
+
+!saved_models/ml/.gitkeep
+!saved_models/dl/.gitkeep
+!saved_models/scalers/.gitkeep
+
+# Temporary files
+>>>>>>> c1d02e34ece27a3c9b04165ab2f22b29b07b2f86
+*.tmp
